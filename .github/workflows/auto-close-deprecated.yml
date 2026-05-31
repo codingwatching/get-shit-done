@@ -1,4 +1,4 @@
-name: Auto-close (repository deprecated)
+name: Auto-close (repository moved)
 
 on:
   issues:
@@ -21,15 +21,13 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           gh issue comment "$NUM" --repo "$REPO" --body-file - <<'BODY'
-          ⚠️ **This repository is deprecated and unmaintained.**
+          📦 **This repository has moved and is no longer maintained here.**
 
-          The maintainer (TÂCHES) has been unreachable since 2026-04-01.
-          The `$GSD` token has been linked publicly to a rug-pull.
+          Development now happens at:
+          https://github.com/open-gsd/gsd-core
 
-          **Please file your issue on the active fork:**
-          https://github.com/GSD-redux/get-shit-done-redux/issues/new/choose
-
-          See the README at the top of this repo for full context.
+          **Please file your issue on the active repo:**
+          https://github.com/open-gsd/gsd-core/issues/new/choose
 
           This issue is being auto-closed and locked.
           BODY
@@ -46,15 +44,15 @@ jobs:
           REPO: ${{ github.repository }}
         run: |
           gh pr comment "$NUM" --repo "$REPO" --body-file - <<'BODY'
-          ⚠️ **This repository is deprecated and unmaintained.**
+          📦 **This repository has moved and is no longer maintained here.**
 
-          The maintainer (TÂCHES) has been unreachable since 2026-04-01.
-          The `$GSD` token has been linked publicly to a rug-pull.
+          Development now happens at:
+          https://github.com/open-gsd/gsd-core
 
-          **Please re-open your PR against the active fork:**
-          https://github.com/GSD-redux/get-shit-done-redux
+          **Please re-open your PR against the active repo:**
+          https://github.com/open-gsd/gsd-core
 
-          (You'll need to rebase your branch against `GSD-redux/get-shit-done-redux` first.)
+          (You'll need to rebase your branch against `open-gsd/gsd-core` first.)
 
           This PR is being auto-closed and locked.
           BODY
